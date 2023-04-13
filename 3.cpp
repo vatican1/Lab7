@@ -5,7 +5,7 @@ double a = 100;
 
 double f(double x, double t, double g)
 {
-	return exp(-g * g) * exp(-( x - g) * (x - g) / (2 * a * t));
+    return exp(-g * g) * exp(-( x - g) * (x - g) / (2 * a * t));
 }
 
 double integral(const double x, const double t, const double left, const double right)
