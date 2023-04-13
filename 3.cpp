@@ -10,12 +10,12 @@ double f(double x, double t, double g)
 
 double integral(const double x, const double t, const double left, const double right)
 {
-	double sum = 0;
+    double sum = 0;
     double amount = 1000;
 	for (int i = 0; i < amount - 1; ++i)
 	{
-		double x_curr = (i * left + (amount - i - 1) * right) / amount;
-		double x_next = ( (i + 1) * left +  (amount - i - 2) * right) / amount;
+        double x_curr = (i * left + (amount - i - 1) * right) / amount;
+        double x_next = ( (i + 1) * left +  (amount - i - 2) * right) / amount;
 		sum += (f(x, t, x_next) + f(x, t, x_curr)) / 2 * (x_next - x_curr);
 	}
 	return sum;
@@ -30,10 +30,10 @@ double T(double x, double t, double l, double r)
 int main()
 {
     double dt = 0.1;
-	double TEps = 0.01;
-	double left = -10;
+    double TEps = 0.01;
+    double left = -10;
     double right = 10;
-	double T_min, T_max;
+    double T_min, T_max;
     double t = 0.1;
     int kernelLen = 100;
 	do
